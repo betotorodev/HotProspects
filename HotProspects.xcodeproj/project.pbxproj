@@ -17,6 +17,7 @@
 		188457D528D3882400185F07 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D428D3882400185F07 /* ResultView.swift */; };
 		188457D728D3906900185F07 /* Interpolatio9nView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D628D3906900185F07 /* Interpolatio9nView.swift */; };
 		188457D928D3B89A00185F07 /* ContextMenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D828D3B89A00185F07 /* ContextMenusView.swift */; };
+		188457DB28D3BB1200185F07 /* SwipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457DA28D3BB1200185F07 /* SwipeRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		188457D428D3882400185F07 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		188457D628D3906900185F07 /* Interpolatio9nView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolatio9nView.swift; sourceTree = "<group>"; };
 		188457D828D3B89A00185F07 /* ContextMenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenusView.swift; sourceTree = "<group>"; };
+		188457DA28D3BB1200185F07 /* SwipeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				188457D428D3882400185F07 /* ResultView.swift */,
 				188457D628D3906900185F07 /* Interpolatio9nView.swift */,
 				188457D828D3B89A00185F07 /* ContextMenusView.swift */,
+				188457DA28D3BB1200185F07 /* SwipeRowView.swift */,
 			);
 			path = exercises;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				188457D728D3906900185F07 /* Interpolatio9nView.swift in Sources */,
 				188457D128D22FD600185F07 /* MenuTabView.swift in Sources */,
 				188457D328D2720600185F07 /* PushingManualView.swift in Sources */,
+				188457DB28D3BB1200185F07 /* SwipeRowView.swift in Sources */,
 				188457D528D3882400185F07 /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
