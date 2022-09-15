@@ -16,6 +16,7 @@
 		188457D328D2720600185F07 /* PushingManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D228D2720600185F07 /* PushingManualView.swift */; };
 		188457D528D3882400185F07 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D428D3882400185F07 /* ResultView.swift */; };
 		188457D728D3906900185F07 /* Interpolatio9nView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D628D3906900185F07 /* Interpolatio9nView.swift */; };
+		188457D928D3B89A00185F07 /* ContextMenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457D828D3B89A00185F07 /* ContextMenusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		188457D228D2720600185F07 /* PushingManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushingManualView.swift; sourceTree = "<group>"; };
 		188457D428D3882400185F07 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		188457D628D3906900185F07 /* Interpolatio9nView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interpolatio9nView.swift; sourceTree = "<group>"; };
+		188457D828D3B89A00185F07 /* ContextMenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				188457D228D2720600185F07 /* PushingManualView.swift */,
 				188457D428D3882400185F07 /* ResultView.swift */,
 				188457D628D3906900185F07 /* Interpolatio9nView.swift */,
+				188457D828D3B89A00185F07 /* ContextMenusView.swift */,
 			);
 			path = exercises;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188457C228D2287C00185F07 /* ContentView.swift in Sources */,
+				188457D928D3B89A00185F07 /* ContextMenusView.swift in Sources */,
 				188457C028D2287C00185F07 /* HotProspectsApp.swift in Sources */,
 				188457CF28D22C5300185F07 /* EnviromentObjectView.swift in Sources */,
 				188457D728D3906900185F07 /* Interpolatio9nView.swift in Sources */,
