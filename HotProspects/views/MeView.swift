@@ -5,16 +5,57 @@
 //  Created by Beto Toro on 19/09/22.
 //
 
+import CoreImage
+import CoreImage.CIFilterBuiltins
 import SwiftUI
 
 struct MeView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @State private var name = "Anonymous"
+  @State private var emailAddress = "you@yoursite.com"
+  
+  let context = CIContext()
+  let filter = CIFilter.qrCodeGenerator()
+  
+  func generateQRCode(from string: String) -> UIImage {
+    filter.message = Data(string.utf8)
+    
+    if let outputImage = filter.outputImage {
+      if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
+        return UIImage(cgImage: cgimg)
+      }
     }
+    
+    return UIImage(systemName: "xmark.circle") ?? UIImage()
+  }
+  
+  var body: some View {
+    NavigationView {
+      Form {
+        TextField("Name", text: $name)
+          .textContentType(.name)
+          .font(.title)
+        
+        TextField("Email address", text: $emailAddress)
+          .textContentType(.emailAddress)
+          .font(.title)
+        
+        HStack {
+          Spacer()
+          Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
+            .resizable()
+            .interpolation(.none)
+            .scaledToFit()
+            .frame(width: 200, height: 200)
+          Spacer()
+        }
+      }
+      .navigationTitle("Your code")
+    }
+  }
 }
 
 struct MeView_Previews: PreviewProvider {
-    static var previews: some View {
-        MeView()
-    }
+  static var previews: some View {
+    MeView()
+  }
 }
