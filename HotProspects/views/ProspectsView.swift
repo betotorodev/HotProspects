@@ -93,10 +93,17 @@ struct ProspectsView: View {
       List {
         ForEach(filteredProspects) { prospect in
           VStack(alignment: .leading) {
-            Text(prospect.name)
-              .font(.headline)
-            Text(prospect.emailAddress)
-              .foregroundColor(.secondary)
+            HStack {
+              Text("\(prospect.isContacted ? "🔥" : "😞")")
+                .font(.title)
+//                .padding(.trailing)
+              VStack(alignment: .leading) {
+                Text(prospect.name)
+                  .font(.headline)
+                Text(prospect.emailAddress)
+                  .foregroundColor(.secondary)
+              }
+            }
           }
           .swipeActions {
             if prospect.isContacted {
