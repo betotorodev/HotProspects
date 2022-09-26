@@ -24,6 +24,7 @@
 		188457E528D8CAEA00185F07 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188457E428D8CAEA00185F07 /* Prospect.swift */; };
 		188457E828DA54AB00185F07 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 188457E728DA54AB00185F07 /* CodeScanner */; };
 		188C1DA128DCAEB600FE086D /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C1DA028DCAEB600FE086D /* ImageSaver.swift */; };
+		18D45F1528E2351A00436E6B /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D45F1428E2351A00436E6B /* FileManager-DocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		188457E128D8C6A400185F07 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		188457E428D8CAEA00185F07 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		188C1DA028DCAEB600FE086D /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		18D45F1428E2351A00436E6B /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				188457E428D8CAEA00185F07 /* Prospect.swift */,
 				188C1DA028DCAEB600FE086D /* ImageSaver.swift */,
+				18D45F1428E2351A00436E6B /* FileManager-DocumentsDirectory.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				188C1DA128DCAEB600FE086D /* ImageSaver.swift in Sources */,
 				188457E528D8CAEA00185F07 /* Prospect.swift in Sources */,
 				188457D928D3B89A00185F07 /* ContextMenusView.swift in Sources */,
+				18D45F1528E2351A00436E6B /* FileManager-DocumentsDirectory.swift in Sources */,
 				188457C028D2287C00185F07 /* HotProspectsApp.swift in Sources */,
 				188457CF28D22C5300185F07 /* EnviromentObjectView.swift in Sources */,
 				188457D728D3906900185F07 /* Interpolatio9nView.swift in Sources */,
