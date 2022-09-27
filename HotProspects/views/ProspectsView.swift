@@ -13,7 +13,12 @@ struct ProspectsView: View {
   enum FilterType {
     case none, contacted, uncontacted
   }
+  enum SortType {
+    case name, date
+  }
   @State private var isShowingScanner = false
+  @State private var sortOrder = SortType.date
+  @State private var isShowingSortOptions = false
   let filter: FilterType
   
   var title: String {
@@ -28,13 +33,21 @@ struct ProspectsView: View {
   }
   
   var filteredProspects: [Prospect] {
+    let result: [Prospect]
+    
     switch filter {
     case .none:
-      return prospects.people
+      result = prospects.people
     case .contacted:
-      return prospects.people.filter { $0.isContacted }
+      result = prospects.people.filter { $0.isContacted }
     case .uncontacted:
-      return prospects.people.filter { !$0.isContacted }
+      result = prospects.people.filter { !$0.isContacted }
+    }
+    
+    if sortOrder == .name {
+      return result.sorted { $0.name < $1.name }
+    } else {
+      return result.reversed()
     }
   }
   
@@ -134,11 +147,25 @@ struct ProspectsView: View {
       }
       .navigationTitle(title)
       .toolbar {
-        Button {
-          isShowingScanner = true
-        } label: {
-          Label("Scan", systemImage: "qrcode.viewfinder")
+        ToolbarItem(placement: .navigationBarLeading) {
+          Button {
+            isShowingSortOptions = true
+          } label: {
+            Label("Sort", systemImage: "arrow.up.arrow.down")
+          }
         }
+        
+        ToolbarItem(placement: .navigationBarTrailing) {
+          Button {
+            isShowingScanner = true
+          } label: {
+            Label("Scan", systemImage: "qrcode.viewfinder")
+          }
+        }
+      }
+      .confirmationDialog("Sort by...", isPresented: $isShowingSortOptions) {
+        Button("Name (A-Z)") { sortOrder = .name }
+        Button("Date (Newest first)") { sortOrder = .date }
       }
       .sheet(isPresented: $isShowingScanner) {
         CodeScannerView(codeTypes: [.qr], simulatedData: "Beto Toro\nbeto@ejemplo.com", completion: handleScan)
